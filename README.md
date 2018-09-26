@@ -8,7 +8,7 @@ This repository provides source code and pre-trained models for fetal brain loca
 
 *    '*' authors contributed equally.
 
-For image reconstruction code, please refer to https://cmiclab.cs.ucl.ac.uk/GIFT-Surg/NiftyMIC
+For image reconstruction code, please refer to https://github.com/gift-surg/NiftyMIC
 
 # Requirements
 * A CUDA compatable GPU with memoery not less than 6GB is recommended for training. For testing only, a CUDA compatable GPU may not be required.
