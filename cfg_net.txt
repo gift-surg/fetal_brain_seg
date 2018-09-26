@@ -1,0 +1,48 @@
+[network1] # for detection
+# type of network
+net_type = PNet
+
+# name of network
+net_name = pnet
+
+# input patch shape e.g, [D, H, W, C]
+data_shape = [1, 96, 96, 1]
+
+# output patch shape, [D, H, W, C]
+label_shape = [1, 96, 96, 1]
+
+# number of class
+class_num = 2
+
+# model_file
+model_file = model/detect/pnet.ckpt
+
+[network2] # for segmentation
+# type of network
+net_type = PNet
+
+# name of network
+net_name = pnet_seg
+
+# input patch shape e.g, [D, H, W, C]
+data_shape = [1, 96, 96, 1]
+
+# output patch shape, [D, H, W, C]
+label_shape = [1, 96, 96, 1]
+
+# number of class
+class_num = 2
+
+# model_file
+model_file = model/pnet-s10-ml/pnet_seg.ckpt
+
+[network_parameter]
+
+[testing]
+size_factor = [1,4,4]
+
+# max batch size
+batch_size = 80
+
+# 1, using fixed tensor shape (default), 2, adaptive censor shape in 2D, 3, adaptive censorship in 3D
+shape_mode = 1

@@ -1,0 +1,47 @@
+[data]
+# before converting the data into tfrecord, please make sure the images have been normalised
+# and optionally, the weight (mask) and label for each image is provided
+
+# list of folders that contain images
+# (required, list of strings)
+data_root = [/Users/guotaiwang/Documents/data/FetalBrain/Data_norm]
+
+# list of image name postfix, each is seen as one modality
+# (required, list of strings)
+modality_postfix = [Image]
+
+# whether annotations are loaded or not
+# (required, bool)
+with_ground_truth = True
+
+# post fix of label files, required if with_ground_truth is True
+# (optional, string)
+label_postfix = Label
+
+# whether weights (or mask) are loaded or not
+# (required, bool)
+with_weight = True
+
+# post fix of weight files, required if with_weight is True
+# (optional, string)
+weight_postfix = Weight
+
+# postfix of images
+# (required, string)
+file_post_fix = nii.gz
+
+# an optional .txt file containing the filenames in data_root
+# (optional, string)
+data_names = config/file_names/train_names_all.txt 
+
+# only data_subset images loaded, all images if data_num is None e.g.,[0,10]
+# (optional, list of integers)
+data_subset =  [0,10]
+
+# when with_weight==True, whether replace pixels with weight ==0 with random numbers
+# (optional, bool, default is False)
+replace_background_with_random = True
+
+# the output filename
+# (required, string)
+tfrecords_filename = data/bf_img.tfrecords

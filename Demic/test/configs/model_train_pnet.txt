@@ -1,0 +1,109 @@
+[data]
+data_root      = [/Users/guotaiwang/Documents/data/FetalBrain/Data_norm]
+data_names     = /Users/guotaiwang/Documents/data/FetalBrain/train_names1.txt
+data_names_val = /Users/guotaiwang/Documents/data/FetalBrain/valid_names1.txt
+modality_postfix     = [Image]
+file_postfix         = nii.gz
+with_ground_truth    = True
+label_postfix        = Label
+with_weight          = True
+weight_postfix       = Weight
+label_convert_source = [0, 1, 2, 3, 4]
+label_convert_target = [0, 0, 1, 0, 0]
+
+# data augmentation
+# a list with angles in degrees, e.g. [-3.14, 3.14]
+# (optional, list of float, default is None)
+random_rotate   = [-3.14, 3.14]
+
+# a bool denoting left right flip or not
+# (optional, bool, default is False)
+flip_left_right = True
+# a bool denoting up down flip or not
+# (optional, bool, default is False)
+flip_up_down    = True
+
+# patch sampling mode
+# 0: for segmentation, randomly sample patch with fixed size,
+# 1: for segmentation, crop with bounding box and resize within plane,
+#    and randomly sample along z axis
+# (required, integer)
+patch_mode = 1
+
+# bounding box margin for along z,y,x axis. (when patch_mode = 1)
+# (optional, list of integers, default is [0,0,0])
+bounding_box_margin = [5,8,8]
+
+[network]
+# type of network
+# (required, string)
+net_type = PNet
+
+# name of network
+# (required, string)
+net_name = pnet
+
+patch_shape_x        = [16, 96, 96, 1]
+patch_shape_y        = [10, 96, 96, 1]
+patch_type_x         = float32 
+patch_type_y         = int32
+
+# number of class, required for segmentation task
+# (optional, integer)
+class_num = 2
+
+
+[network_parameter]
+num_features = [64, 64, 64, 64, 64]
+num_dilations = [1, 2, 3, 4, 5]
+
+[training]
+loss_type = Dice
+
+optimizer = Adam
+# learning rate
+# (optional, float, default is 1e-3)
+learning_rate = 1e-3
+
+momentum = 0.9
+# weight decay
+# (optional, float, default is 1e-7)
+decay = 1e-7
+
+batch_size = 1
+# (required, integer)
+run_validation = True
+
+print_log_info = False
+
+cuda_devices = 0
+# seed of random number, an integer
+# (optional, integer, default is 0)
+random_seed = 0
+
+# start epoch
+# (required, integer)
+start_epoch = 0
+
+# maximal epoch
+# (required, integer)
+maximal_epoch = 10
+
+# snapshot epoch
+# (required, integer)
+snapshot_epoch = 10
+
+# pertained model, used for fine-tuning, required if start_epoch > 0
+# (optional, string, default is None)
+pretrained_model = 
+
+# model_save_prefix
+# (required, string)
+model_save_prefix = ./temp/pnet
+
+# number of batch per_epoch
+# (required, integer)
+batch_number = 2
+
+# test_steps
+test_steps = 1

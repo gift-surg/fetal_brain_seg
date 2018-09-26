@@ -1,0 +1,2 @@
+demo_data/image1.nii.gz demo_data/image1_segment.nii.gz
+demo_data/image2.nii.gz demo_data/image2_segment.nii.gz
