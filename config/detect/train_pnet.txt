@@ -1,0 +1,116 @@
+[dataset]
+# filename of tfrecords
+# (required, string)
+data_train = [/home/guotwang/data/FetalBrain/tf_records/hp_train.tfrecords]
+
+data_valid0 = [/home/guotwang/data/FetalBrain/tf_records/h_valid.tfrecords]
+data_valid1 = [/home/guotwang/data/FetalBrain/tf_records/p_valid.tfrecords]
+
+[sampler]
+# batch size to load
+# (optional, integer, default is 5)
+batch_size  = 1
+
+# patch shape [D, H, W, C]
+# (required, list)
+data_shape  = [20, 96, 96, 1]
+weight_shape= [20, 96, 96, 1]
+label_shape = [20, 96, 96, 1]
+
+# whether load ground truth or not
+# (optional, bool, default is False)
+with_ground_truth = True
+
+# data augmentation
+# a list with angles in radians, e.g. [-3.14, 3.14]
+# (optional, list of float, default is None)  enabled when patch_mode = 1
+random_rotate = [-3.14, 3.14]
+
+# a bool denoting left right flip or not
+# (optional, bool, default is False)
+flip_left_right = True
+
+# a bool denoting up down flip or not
+# (optional, bool, default is False)
+flip_up_down = True
+
+# two lists of label convert, each label in label_convert_source is converted to the corresponding one in label_convert_target, used for segmentation task
+# (optional, list, default is None)
+label_convert_source = [0, 1, 2, 3, 4]
+label_convert_target = [0, 1, 0, 0, 0]
+
+# patch sampling mode
+# 0: for segmentation, randomly sample patch with fixed size,
+# 1: for segmentation, crop with bounding box and resize within plane,
+#    and randomly sample along z axis
+# 2: resize 2d images to given size
+# 3: randomly using 1 and 2
+# (required, integer)
+patch_mode = 2
+
+# bounding box margin for along z,y,x axis. (when patch_mode = 1 )
+# (optional, list of integers, default is [0,0,0])
+bounding_box_margin = [3,8,8]
+
+[network]
+# type of network
+# (required, string)
+net_type = PNet
+
+# name of network
+# (required, string)
+net_name = pnet
+
+# bn_training, True: use batch mean False: use moving mean
+# (optional, bool, default: True)
+bn_training = True
+
+# number of class, required for segmentation task
+# (optional, integer)
+class_num = 2
+
+[network_parameter]
+
+[training]
+# application type, 0 segmentation, 1 regression
+# (required, integer)
+app_type = 0
+
+# seed of random number, an integer
+# (optional, integer, default is 0)
+random_seed = 0
+
+# start epoch
+# (required, integer)
+start_iter = 0
+
+# maximal epoch
+# (required, integer)
+maximal_iter = 5000
+
+# snapshot epoch
+# (required, integer)
+snapshot_iter = 1000
+
+# pertained model, used for fine-tuning, required if start_epoch > 0
+# (optional, string, default is None)
+pretrained_model = 
+
+# model_save_prefix
+# (required, string)
+model_save_prefix = model/detect/pnet_test
+
+
+test_interval = 50
+
+# number of batch for testing in each epoch
+# (required, integer)
+test_steps = 2
+
+# learning rate
+# (optional, float, default is 1e-3)
+learning_rate = 1e-3
+
+# weight decay
+# (optional, float, default is 1e-7)
+decay = 1e-7
