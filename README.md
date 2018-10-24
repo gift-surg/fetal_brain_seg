@@ -15,10 +15,7 @@ For image reconstruction code, please refer to https://github.com/gift-surg/Nift
 
 * Tensorflow. Install tensorflow following instructions from https://www.tensorflow.org/install. Tested version is 1.7.0.
 
-* NiftyNet. Install it by following instructions from http://niftynet.readthedocs.io/en/dev/installation.html or simply typing:
-```bash
-pip install niftynet
-```
+* NiftyNet. Tested version is 0.2.0. You can download the source code from https://github.com/NifTK/NiftyNet/releases/tag/v0.2.0 and copy it to this folder.
 
 # How to use
 ## 1, Use pre-trained models for fetal brain localization and segmentation
