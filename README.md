@@ -10,6 +10,7 @@ This repository provides source code and pre-trained models for fetal brain loca
 
 ![detect result](./demo_data/detect.png)
 ![detect result](./demo_data/segment.png)
+
 For image reconstruction code, please refer to https://github.com/gift-surg/NiftyMIC
 
 # Requirements
@@ -20,7 +21,6 @@ For image reconstruction code, please refer to https://github.com/gift-surg/Nift
 * NiftyNet. An edited version of NiftyNet is included in this repository.
 
 # How to use
-## 1, Use pre-trained models for fetal brain localization and segmentation
 
 * For fetal brain localization, run
 
