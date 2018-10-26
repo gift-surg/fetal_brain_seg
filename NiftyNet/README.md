@@ -13,9 +13,9 @@ For image reconstruction code, please refer to https://github.com/gift-surg/Nift
 # Requirements
 * A CUDA compatable GPU with memoery not less than 6GB is recommended for training. For testing only, a CUDA compatable GPU may not be required.
 
-* Tensorflow. Install tensorflow following instructions from https://www.tensorflow.org/install. Tested version is 1.7.0 and 1.11.0.
+* Tensorflow. Install tensorflow following instructions from https://www.tensorflow.org/install. Tested version is 1.7.0.
 
-* NiftyNet. An edited version of NiftyNet is included in this repository.
+* NiftyNet. Tested version is 0.2.0. You can download the source code from https://github.com/NifTK/NiftyNet/releases/tag/v0.2.0 and copy it to this folder.
 
 # How to use
 ## 1, Use pre-trained models for fetal brain localization and segmentation
