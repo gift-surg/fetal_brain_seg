@@ -18,24 +18,17 @@ For image reconstruction code, please refer to https://github.com/gift-surg/Nift
 # Requirements
 * A CUDA compatable GPU with memoery not less than 6GB is recommended for training. For testing only, a CUDA compatable GPU may not be required.
 
-* Tensorflow. Install tensorflow following instructions from https://www.tensorflow.org/install. Tested versions are 1.7.0 and 1.11.0.
+* Tensorflow. Install tensorflow following instructions from https://www.tensorflow.org/install. Tested version 1.11.0 and 1.12.
 
-* NiftyNet. An edited version of NiftyNet is included in this repository.
+* NiftyNet. Tested version is v0.2.0: https://github.com/NifTK/NiftyNet/releases/tag/v0.2.0
+
+* Demic (a tool to use NiftyNet). Tested version is v0.1: https://github.com/taigw/Demic/releases/tag/v0.1
 
 # How to use
-
-* For fetal brain localization, run
-
-```bash
-python test.py detect cfg_data_detect.txt
-```
+* For fetal brain localization, run `bash/inference_detect.sh`, you need to edit the `PYTHONPATH` environment variable in that file so that it includes the path of Niftynet and Demic.
 
 
-* For fetal brain segmentation, run
-
-```bash
-python test.py segment cfg_data_segment.txt
-```
+* For fetal brain segmentation, run `bash/inference_segment.sh`, you need to edit the `PYTHONPATH` environment variable in that file so that it includes the path of Niftynet and Demic.
 
 * You can edit `cfg_data_detect.txt` and `cfg_data_segment.txt` to customize the input and output image names.
 
