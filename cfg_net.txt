@@ -17,6 +17,8 @@ class_num = 2
 # model_file
 model_file = model/detect/pnet.ckpt
 
+[network1_parameter]
+
 [network2] # for segmentation
 # type of network
 net_type = PNet
@@ -34,15 +36,34 @@ label_shape = [1, 96, 96, 1]
 class_num = 2
 
 # model_file
-model_file = model/pnet-s10-ml/pnet_seg.ckpt
+model_file = model/segment/pnet_seg.ckpt
 
-[network_parameter]
+[network2_parameter]
 
-[testing]
-size_factor = [1,4,4]
+[detect_testing]
+fix_batch_size = False
+
+use_depth_as_batch_size = True
 
 # max batch size
 batch_size = 80
+
+resize_input = True
+resize_input_to_given_shape_in_2d = [96, 96]
+
+# 1, using fixed tensor shape (default), 2, adaptive censor shape in 2D, 3, adaptive censorship in 3D
+shape_mode = 1
+
+[segment_testing]
+fix_batch_size = False
+
+use_depth_as_batch_size = True
+
+# max batch size
+batch_size = 40
+
+resize_input = True
+resize_input_to_given_shape_in_2d = [96, 96]
 
 # 1, using fixed tensor shape (default), 2, adaptive censor shape in 2D, 3, adaptive censorship in 3D
 shape_mode = 1
