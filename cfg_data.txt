@@ -1,0 +1,9 @@
+[image_1]
+input = demo_data/image1.nii.gz
+detect_output  = demo_data/image1_detect.nii.gz
+segment_output = demo_data/image1_segment.nii.gz
+
+[image_2]
+input = demo_data/image2.nii.gz
+detect_output  = demo_data/image2_detect.nii.gz
+segment_output = demo_data/image2_segment.nii.gz

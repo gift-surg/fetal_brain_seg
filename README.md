@@ -25,12 +25,9 @@ For image reconstruction code, please refer to https://github.com/gift-surg/Nift
 * Demic (a tool to use NiftyNet). Tested version is v0.1: https://github.com/taigw/Demic/releases/tag/v0.1.
 
 # How to use
-* For fetal brain localization, run `bash/inference_detect.sh`, you need to edit the `PYTHONPATH` environment variable in that file so that it includes the path of NiftyNet and Demic.
+* To get fetal brain detection and segmentation results, run `bash/inference.sh`. You need to edit the `PYTHONPATH` environment variable in that file so that it includes the path of NiftyNet and Demic.
 
-
-* For fetal brain segmentation, run `bash/inference_segment.sh`, you need to edit the `PYTHONPATH` environment variable in that file so that it includes the path of NiftyNet and Demic.
-
-* You can edit `cfg_data_detect.txt` and `cfg_data_segment.txt` to customize the input and output image names.
+* You can edit `cfg_data.txt` to customize the input and output image names.
 
 # Acknowledgement
 This work is part of the GIFT-Surg project (https://www.gift-surg.ac.uk/). It is supported by Wellcome Trust [WT101957; 203145Z/16/Z], EPSRC [EP/L016478/1; NS/A000027/1; NS/A000050/1], and the NIHR UCLH BRC.
