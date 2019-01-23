@@ -1,0 +1,45 @@
+[image_1]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_trufi_26.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_trufi_26.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_trufi_26.nii.gz
+
+[image_2]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_3mm_9.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_3mm_9.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_3mm_9.nii.gz
+
+[image_3]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_trufi_uterus_4.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_trufi_uterus_4.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_trufi_uterus_4.nii.gz
+
+[image_4]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_brain_3planes_12.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_brain_3planes_12.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_brain_3planes_12.nii.gz
+
+[image_5]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_3mm_13.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_3mm_13.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_3mm_13.nii.gz
+
+[image_6]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_brain_3planes_8.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_brain_3planes_8.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_brain_3planes_8.nii.gz
+
+[image_7]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_brain_3planes_10.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_brain_3planes_10.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_brain_3planes_10.nii.gz
+
+[image_8]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_brain_3planes_14.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_brain_3planes_14.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_brain_3planes_14.nii.gz
+
+[image_9]
+input = /mnt/data/spina_bifida/05_UZL11-Study16/nifti/t2_haste_uterus_3.nii.gz
+detect_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/detect/t2_haste_uterus_3.nii.gz
+segment_output = /mnt/NeuroImage_2019/05_UZL11-Study16/segmentation_init/seg_auto/t2_haste_uterus_3.nii.gz
+

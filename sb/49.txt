@@ -1,0 +1,30 @@
+[image_1]
+input = /mnt/data/spina_bifida/49_UZL4-Study1/nifti/BTFE_BH_301.nii.gz
+detect_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/detect/BTFE_BH_301.nii.gz
+segment_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/seg_auto/BTFE_BH_301.nii.gz
+
+[image_2]
+input = /mnt/data/spina_bifida/49_UZL4-Study1/nifti/BTFE_BH_401.nii.gz
+detect_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/detect/BTFE_BH_401.nii.gz
+segment_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/seg_auto/BTFE_BH_401.nii.gz
+
+[image_3]
+input = /mnt/data/spina_bifida/49_UZL4-Study1/nifti/BTFE_BH_501.nii.gz
+detect_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/detect/BTFE_BH_501.nii.gz
+segment_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/seg_auto/BTFE_BH_501.nii.gz
+
+[image_4]
+input = /mnt/data/spina_bifida/49_UZL4-Study1/nifti/BTFE_BH_601.nii.gz
+detect_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/detect/BTFE_BH_601.nii.gz
+segment_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/seg_auto/BTFE_BH_601.nii.gz
+
+[image_5]
+input = /mnt/data/spina_bifida/49_UZL4-Study1/nifti/BTFE_BH_701.nii.gz
+detect_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/detect/BTFE_BH_701.nii.gz
+segment_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/seg_auto/BTFE_BH_701.nii.gz
+
+[image_6]
+input = /mnt/data/spina_bifida/49_UZL4-Study1/nifti/BTFE_BH_801.nii.gz
+detect_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/detect/BTFE_BH_801.nii.gz
+segment_output = /mnt/NeuroImage_2019/49_UZL4-Study1/segmentation_init/seg_auto/BTFE_BH_801.nii.gz
+

@@ -60,8 +60,9 @@ def model_test(net_config_file, data_config_file):
         outp_roi = segment_agent.test_one_volume(img_roi)
         out_roi = np.asarray(outp_roi > 0.5, np.uint8)
         strt = ndimage.generate_binary_structure(3,2)
-        out_roi = padded_binary_closing(out_roi, strt)
-        out_roi = get_largest_component(out_roi)
+        post = padded_binary_closing(out_roi, strt)
+        post = get_largest_component(post)
+        out_roi = out_roi * post
         out = np.zeros(img.shape[:-1], np.uint8)
         out = set_ND_volume_roi_with_bounding_box_range(out, bb_min, bb_max, out_roi)
         save_array_as_nifty_volume(out, segment_name, input_name)

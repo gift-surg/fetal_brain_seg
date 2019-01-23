@@ -1,0 +1,20 @@
+[image_1]
+input = /mnt/data/spina_bifida/32_UZL00064-Study1/nifti/WIP_body_T2_bis_CLEAR_1401.nii.gz
+detect_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/detect/WIP_body_T2_bis_CLEAR_1401.nii.gz
+segment_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/seg_auto/WIP_body_T2_bis_CLEAR_1401.nii.gz
+
+[image_2]
+input = /mnt/data/spina_bifida/32_UZL00064-Study1/nifti/WIP_body_T2_bis_CLEAR_1501.nii.gz
+detect_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/detect/WIP_body_T2_bis_CLEAR_1501.nii.gz
+segment_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/seg_auto/WIP_body_T2_bis_CLEAR_1501.nii.gz
+
+[image_3]
+input = /mnt/data/spina_bifida/32_UZL00064-Study1/nifti/WIP_COR_UTERUS_HR_CLEAR_401.nii.gz
+detect_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/detect/WIP_COR_UTERUS_HR_CLEAR_401.nii.gz
+segment_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/seg_auto/WIP_COR_UTERUS_HR_CLEAR_401.nii.gz
+
+[image_4]
+input = /mnt/data/spina_bifida/32_UZL00064-Study1/nifti/WIP_T2W_uterus_SENSE_201.nii.gz
+detect_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/detect/WIP_T2W_uterus_SENSE_201.nii.gz
+segment_output = /mnt/NeuroImage_2019/32_UZL00064-Study1/segmentation_init/seg_auto/WIP_T2W_uterus_SENSE_201.nii.gz
+
