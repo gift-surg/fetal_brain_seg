@@ -10,16 +10,13 @@ import math
 import time
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 from datetime import datetime
 from Demic.train_test.model_test import TestAgent
 from Demic.image_io.file_read_write import *
 from Demic.util.parse_config import parse_config
 from Demic.util.image_process import *
 
-def model_test(net_config_file, data_config_file):
-    config_net  = parse_config(net_config_file)
-    config_data = parse_config(data_config_file)
+def model_test(config_net, config_data):
     config_detect = {}
     config_detect['network'] = config_net['network1']
     config_detect['network_parameter'] = config_net['network1_parameter']
@@ -38,7 +35,7 @@ def model_test(net_config_file, data_config_file):
     class_num = 2
     for item in config_data:
         input_name   = config_data[item]['input']
-        detect_name  = config_data[item]['detect_output']
+        detect_name  = config_data[item].get('detect_output', None)
         segment_name = config_data[item]['segment_output']
         print(input_name)
         # stage 1, detect
@@ -50,7 +47,8 @@ def model_test(net_config_file, data_config_file):
 
         margin = [3, 8, 8]
         detect_out = get_detection_binary_bounding_box(out, margin, None, mode = 0)
-        save_array_as_nifty_volume(detect_out, detect_name, input_name)
+        if(detect_name is not None):
+            save_array_as_nifty_volume(detect_out, detect_name, input_name)
 
         # stage 2, segment
         margin = [0, 10, 10]
@@ -75,4 +73,6 @@ if __name__ == '__main__':
     net_config_file  = 'cfg_net.txt'
     data_config_file = sys.argv[1]
     assert(os.path.isfile(net_config_file) and os.path.isfile(data_config_file))
-    model_test(net_config_file, data_config_file)
+    net_config  = parse_config(net_config_file)
+    data_config = parse_config(data_config_file)
+    model_test(net_config, data_config)

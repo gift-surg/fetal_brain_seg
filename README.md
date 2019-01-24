@@ -29,5 +29,17 @@ For image reconstruction code, please refer to https://github.com/gift-surg/Nift
 
 * You can edit `cfg_data.txt` to customize the input and output image names.
 
+* Alternatively, you can run the following command after setting `PYTHONPATH` environment variable correctly.
+
+```bash
+python fetal_brain_seg.py --input_names demo_data/image1.nii.gz demo_data/image2.nii.gz --segment_output_names demo_data/image1_segment.nii.gz demo_data/image2_segment.nii.gz 
+```
+
+Or the following command that will save detection results.
+
+```bash
+python fetal_brain_seg.py --input_names demo_data/image1.nii.gz demo_data/image2.nii.gz --segment_output_names demo_data/image1_segment.nii.gz demo_data/image2_segment.nii.gz --detect_output_names demo_data/image1_detect.nii.gz demo_data/image2_detect.nii.gz
+```
+
 # Acknowledgement
 This work is part of the GIFT-Surg project (https://www.gift-surg.ac.uk/). It is supported by Wellcome Trust [WT101957; 203145Z/16/Z], EPSRC [EP/L016478/1; NS/A000027/1; NS/A000050/1], and the NIHR UCLH BRC.
